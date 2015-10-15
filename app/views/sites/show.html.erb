@@ -1,6 +1,12 @@
-
 <%= @site.url %></br>
+
 <% @links.each do |link| %>
-<p>Website: <%= link.link_url%> </p>
-<p> Response: <%=link.http_response %>
-  <% end %>
+  <a href=<%= link.link_url%>> <%= link.link_url%> </a>
+  <p> Response: <%=link.http_response %> </p>
+  <p>Status: <% if link.http_response.to_i < 400 %>
+    Good
+    <% else %>
+    Gad
+<% end %>
+</br></br></br>
+<% end %>
