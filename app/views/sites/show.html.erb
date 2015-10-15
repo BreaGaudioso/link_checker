@@ -1,3 +1,6 @@
-<h1>Sites#show</h1>
-<%= @site.url%></br>
-document: <%= @links[0].text%>
+
+<%= @site.url %></br>
+<% @links.each do |link| %>
+<p>Website: <%= link.link_url%> </p>
+<p> Response: <%=link.http_response %>
+  <% end %>
