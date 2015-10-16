@@ -1,7 +1,14 @@
-<h1>Sites#index</h1>
+<div class='row text-center'>
+  <h1>Already checked sites</h1>
+</div>
+<div class='row'>
 <% @sites.each do |site| %>
-<p>Website: <%= site.url%> </p>
-
+  <div class= col-lg-10>
+    <h3><%=site.url%></h3>
+<p> <%= link_to "View Links", site_path(site)%></br>
+<a href=<%=site.url%>> Visit Site </a> </p>
+</div>
 <% end %>
 
+</div>
 

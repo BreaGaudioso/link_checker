@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+
   <title>LinkChecker</title>
+  <nav class='navbar navbar-default '>
+    <div class="container">
+     <ul class="nav nav-pills">
+        <li><%=link_to "View Sites", sites_path %></li>
+        <li><%= link_to "Check a site", new_site_path%></li>
+      </ul>
+    </div>
+  </nav>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+   <div class="container">
 
 <%= yield %>
-
+</div>
 </body>
 </html>

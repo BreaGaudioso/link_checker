@@ -13,3 +13,55 @@
  *= require_tree .
  *= require_self
  */
+ // Example using bootswatch
+//
+// First import  variables
+@import "bootswatch/simplex/variables";
+
+// Then bootstrap itself
+@import "bootstrap";
+
+// And finally bootswatch style itself
+@import "bootswatch/Amelia/bootswatch";
+
+body{
+  color: white;
+  background-color: black;
+}
+
+ .bad{
+  color: red ;
+ }
+
+ .good{
+  color: green ;
+ }
+
+body{
+  color: white;
+}
+
+a:link { 
+    color: grey;
+}
+
+
+// Here are the free themes you can use:
+
+// Amelia
+// Cerulean
+// Cosmo
+// Cyborg
+// Darkly
+// Flatly
+// Journal
+// Lumen
+// Paper
+// Readable
+// Sandstone
+// Simplex
+// Slate
+// Spacelab
+// Superhero
+// United
+// Yeti

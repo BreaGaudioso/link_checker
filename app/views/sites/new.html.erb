@@ -1,6 +1,13 @@
-<h1>Check a new site</h1>
+<div class='row text-center'>
+  <h1>Check a new site</h1>
+</div>
+<div class='row text-center'>
 
-<%= form_for @site do |f| %>
-Website URL: <%= f.text_field :url %></br>
-<%= f.submit%>
-<% end %>
+  <%= form_for @site do |f| %>
+    <div class="form-group">
+      <label for="url">Website URL:</label>
+        <%= f.text_field :url %></br>
+    </div>
+    <%= f.submit%>
+  <% end %>
+</div>  

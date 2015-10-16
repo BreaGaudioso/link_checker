@@ -1,12 +1,24 @@
-<%= @site.url %></br>
 
-<% @links.each do |link| %>
-  <a href=<%= link.link_url%>> <%= link.link_url%> </a>
-  <p> Response: <%=link.http_response %> </p>
-  <p>Status: <% if link.http_response.to_i < 400 %>
-    Good
+<div class='row text-center'>
+  <h3> Links for <%= @site.url %></h3>
+</div>
+
+<div class='row'>
+  <% @links.each do |link| %>
+      <div class= "col-lg-6">
+    <a href=<%= link.link_url%>> <%= link.link_url%> </a>
+    <p> Response: <%=link.http_response %> </p>
+       <% if link.http_response.to_i < 400 %>
+      <p class= "col-lg-6 good "> 
     <% else %>
-    Gad
-<% end %>
-</br></br></br>
-<% end %>
+        <p class= "col-lg-6 bad">
+    <% end %>
+    Status:
+    <% if link.http_response.to_i < 400 %>
+      Good
+    <% else %>
+      Bad</p>
+    <% end %>
+  </div>
+  <% end %>
+</div>
